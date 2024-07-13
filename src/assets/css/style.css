@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Kanit";
+  src: local("Kanit") , url("../font/Kanit/Kanit-ExtraLight.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Kanit-light";
+  src: local("Kanit-light") , url("../font/Kanit/Kanit-ExtraLight.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body
+{
+  font-family: "Kanit";
+  src: url('../font/Kanit/Kanit-Regular.ttf');
+  font-size: 14px;
+  font-weight: 400;
+
+}
+.fontKanit {
+  font-family: "Kanit";
+}
+
+.zoom {
+ 
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.zoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+.section-title h2 {
+  font-family: "Kanit";
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #4c5a7d;
+}
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #eea412;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.navbar-right  a{
+	position: relative;
+	font-size: 18px;
+	display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  border: 2px solid #eea412;
+}
+.navbar-right  a,
+.navbar-right  a.hover-btn-new::after {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.navbar-right  a.hover-btn-new::before,
+.navbar-right  a.hover-btn-new::after {
+  background: #eea412;
+  content: '';
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar-right a.hover-btn-new:hover span {
+  color: #ffffff;
+}
+.navbar-right  .hover-btn-new::before {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.navbar-right  a.hover-btn-new::after {
+  background: #ffffff !important;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.navbar-right a.hover-btn-new span{
+	position: relative;
+	z-index: 2;
+	color: #333333;
+}
+.navbar-right a.hover-btn-new:hover:after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
